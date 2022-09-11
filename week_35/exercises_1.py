@@ -1,3 +1,6 @@
+# Exercises 1
+print('Exercises 1')
+
 # Calculate 530 divided by 7 and give the answer with up to 2 decimals.
 result = round(530 / 7, 2)
 print(result)
