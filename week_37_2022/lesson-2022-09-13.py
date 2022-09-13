@@ -47,3 +47,4 @@ print(len(sentence_two.split()))
 date = '13.09.2022'
 date_list = date.split('.')
 print(date_list)
+print('/'.join(date_list))
