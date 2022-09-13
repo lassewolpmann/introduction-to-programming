@@ -17,9 +17,9 @@ print(len(word) * '*')
 
 '''
 3. Slice and indexing work with lists too. Apply input function to ask three floats from the user.
-Add every word to a list using append function. This function works so that if the name of the list is  lst, 
+Add every float to a list using append function. This function works so that if the name of the list is  lst, 
 lst.append(10) adds 10 to the list lst.
-Finally print a new list which contains two first words from lst.
+Finally print a new list which contains two first float from lst.
 '''
 number_list = []
 
