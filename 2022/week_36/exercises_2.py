@@ -33,6 +33,5 @@ print(number_list[:2])
 With the help of x, y and z write the code which prints the tuple (4, 3, 8, 15). 15 = 4+3+8.
 '''
 x, y, z = (3, 8, 4)
-
 new_tuple = (z, x, y, x + y + z)
 print(new_tuple)
