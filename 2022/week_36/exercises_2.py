@@ -32,11 +32,7 @@ print(number_list[:2])
 4. Use a tuple to assign x = 3, y = 8 and z = 4.
 With the help of x, y and z write the code which prints the tuple (4, 3, 8, 15). 15 = 4+3+8.
 '''
-number_tuple = (3, 8, 4)
-
-x = number_tuple[0]
-y = number_tuple[1]
-z = number_tuple[2]
+x, y, z = (3, 8, 4)
 
 new_tuple = (z, x, y, x + y + z)
 print(new_tuple)
