@@ -7,7 +7,7 @@ The total number of characters should be 15.
 For example, if you typed the word school, the program prints the line *********school
 '''
 word_one = input('Enter a word: ')
-print(f'{(15 - len(word_one)) * "*"}{word_one}')
+print(word_one.rjust(15, '*'))
 
 '''
 2. ‘Prince Edward, the Queen's youngest son, 
@@ -27,7 +27,7 @@ print(sentence_one)
 ’Turku is a city and former capital on the southwest coast of Finland at the mouth of the Aura River’
 '''
 sentence_two = "Turku is a city and former capital on the southwest coast of Finland at the mouth of the Aura River"
-print(sentence_two.rfind('the'))
+print(sentence_two.find('the', sentence_two.find('the') + 1))
 
 '''
 4. The program asks a word. If, for example, the word ‘elephant’ is written, 
