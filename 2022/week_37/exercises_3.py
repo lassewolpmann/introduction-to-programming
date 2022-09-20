@@ -27,7 +27,8 @@ print(sentence_one)
 ’Turku is a city and former capital on the southwest coast of Finland at the mouth of the Aura River’
 '''
 sentence_two = "Turku is a city and former capital on the southwest coast of Finland at the mouth of the Aura River"
-print(sentence_two.find('the', sentence_two.find('the') + 1))
+first_the = sentence_two.find('the')
+print(sentence_two.find('the', first_the + 1))
 
 '''
 4. The program asks a word. If, for example, the word ‘elephant’ is written, 
