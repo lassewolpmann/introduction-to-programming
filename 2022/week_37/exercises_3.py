@@ -28,8 +28,21 @@ print(sentence_one)
 ’Turku is a city and former capital on the southwest coast of Finland at the mouth of the Aura River’
 '''
 sentence_two = 'Turku is a city and former capital on the southwest coast of Finland at the mouth of the Aura River'
-first_the = sentence_two.find('the')
-print(sentence_two.find('the', first_the + 1))
+
+word_to_look_for = 'the'
+word_length = len(word_to_look_for)
+word_occurrence = sentence_two.count(word_to_look_for)
+wanted_word_index = 2   # starting at 0, 1 means the second 'the' in this case
+
+find_index = 0
+for i in range(word_occurrence):
+    word_index = sentence_two.find(word_to_look_for, find_index)
+    print(word_index)
+    if i == wanted_word_index:
+        print(f'{wanted_word_index + 1}. "{word_to_look_for}" is at index {word_index} to {word_index + word_length}')
+
+    else:
+        find_index = word_index + 1
 
 '''
 4. The program asks a word. If, for example, the word ‘elephant’ is written, 
