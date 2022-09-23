@@ -18,7 +18,7 @@ The text above should be printed so that there are no commas and no ’s
 sentence_one = "Prince Edward, the Queen's youngest son, and his wife Countess Sophie published a statement " \
                "thanking Queen Elizabeth II for her years of service."
 
-for ch in [',', "'"]:
+for ch in [",", "'"]:
     sentence_one = sentence_one.replace(ch, '')
 
 print(sentence_one)
@@ -27,7 +27,7 @@ print(sentence_one)
 3. Find the index of the second article ‘the’ from the following sentence using a suitable string method.
 ’Turku is a city and former capital on the southwest coast of Finland at the mouth of the Aura River’
 '''
-sentence_two = "Turku is a city and former capital on the southwest coast of Finland at the mouth of the Aura River"
+sentence_two = 'Turku is a city and former capital on the southwest coast of Finland at the mouth of the Aura River'
 first_the = sentence_two.find('the')
 print(sentence_two.find('the', first_the + 1))
 
