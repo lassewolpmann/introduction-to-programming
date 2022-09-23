@@ -1,4 +1,11 @@
-meal_price = float(input('How much did the meal cost?: '))
+while True:
+    try:
+        meal_price = float(input('How much did the meal cost?: '))
+        break
+
+    except ValueError:
+        print('Wrong input, try again')
+
 tip = meal_price * 0.15
 tax = round((meal_price + tip) * 0.07, 2)
 
