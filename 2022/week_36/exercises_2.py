@@ -6,7 +6,8 @@ print('Exercises 2')
 Use slices and + to construct the string ‘Python is a language’ from s
 '''
 s = 'Python is a good language'
-print(s[:11] + s[16:])
+s_split = s.split(' ')
+print(f'{s_split[0]} {s_split[1]} {s_split[2]} {s_split[4]}')
 
 '''
 2. Use input function to ask ‘Type here a word’. Print so many stars  as the word has characters.
