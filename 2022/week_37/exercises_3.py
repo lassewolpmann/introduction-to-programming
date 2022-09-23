@@ -18,8 +18,9 @@ The text above should be printed so that there are no commas and no ’s
 sentence_one = "Prince Edward, the Queen's youngest son, and his wife Countess Sophie published a statement " \
                "thanking Queen Elizabeth II for her years of service."
 
-sentence_one = sentence_one.replace(',', '')
-sentence_one = sentence_one.replace("'", '')
+for ch in [',', "'"]:
+    sentence_one = sentence_one.replace(ch, '')
+
 print(sentence_one)
 
 '''
