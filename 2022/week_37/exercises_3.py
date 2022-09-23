@@ -41,6 +41,4 @@ The frame changes according to the word.
 '''
 word_two = input('Enter a word: ')
 stars_outline = (len(word_two) + 4) * '*'
-print(stars_outline)
-print(f'* {word_two} *')
-print(stars_outline)
+print(f'{stars_outline}\n* {word_two} *\n{stars_outline}')
