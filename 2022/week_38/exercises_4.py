@@ -198,7 +198,7 @@ def task_4():
     min_lab_groups_1 = (students + max_per_lab - 1) // max_per_lab
     print(f'The minimum number of lab groups needed with these constraints: {min_lab_groups_1}')
 
-    # or
+    # shorter way
     import math
     min_lab_groups_2 = math.ceil(students / max_per_lab)
     print(f'The minimum number of lab groups needed with these constraints: {min_lab_groups_2}')
