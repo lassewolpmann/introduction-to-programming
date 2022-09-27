@@ -192,16 +192,24 @@ def task_4():
     If however we wanted to round the result up, we could use the following formula:
     (numerator + denominator - 1) // denominator
     '''
-    students = int(input('How many students have enrolled on the course?: '))
-    max_per_lab = int(input("What's the maximum number of students per lab group?: "))
+    while True:
+        try:
+            students = int(input('How many students have enrolled on the course?: '))
+            max_per_lab = int(input("What's the maximum number of students per lab group?: "))
 
-    min_lab_groups_1 = (students + max_per_lab - 1) // max_per_lab
+            min_lab_groups_1 = (students + max_per_lab - 1) // max_per_lab
+
+            # or
+            import math
+            min_lab_groups_2 = math.ceil(students / max_per_lab)
+            print(f'The minimum number of lab groups needed with these constraints: {min_lab_groups_2}')
+
+            break
+
+        except ValueError:
+            print('Invalid input, please try again!')
+
     print(f'The minimum number of lab groups needed with these constraints: {min_lab_groups_1}')
-
-    # shorter way
-    import math
-    min_lab_groups_2 = math.ceil(students / max_per_lab)
-    print(f'The minimum number of lab groups needed with these constraints: {min_lab_groups_2}')
 
 
 if __name__ == '__main__':
