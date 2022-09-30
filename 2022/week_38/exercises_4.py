@@ -103,19 +103,14 @@ def task_2():
                 print('Invalid input, try again!')
 
     mean_value = sum(numbers) / len(numbers)
-
-    abs_dev = []
-    for n in numbers:
-        abs_dev.append(abs(n - mean_value))
-
-    avg_abs_dev = sum(abs_dev) / len(abs_dev)
+    abs_dev = [abs(n - mean_value) for n in numbers]
 
     print(f'Mean value: {mean_value}')
 
     for x, dev in enumerate(abs_dev):
         print(f'Absolute deviation of x{x + 1}: {dev}')
 
-    print(f'Average absolute deviation: {avg_abs_dev}')
+    print(f'Average absolute deviation: {sum(abs_dev) / len(abs_dev)}')
 
 
 def task_3():
