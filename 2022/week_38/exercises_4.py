@@ -93,7 +93,7 @@ def task_2():
     for i in range(3):
         while True:
             try:
-                n_input = float(input(f'Enter Number {i + 1}: '))
+                n_input = float(input(f'Give value for x{i + 1}: '))
                 numbers.append(n_input)
 
                 break
@@ -103,6 +103,7 @@ def task_2():
                 print('Invalid input, try again!')
 
     mean_value = sum(numbers) / len(numbers)
+
     abs_dev = [abs(n - mean_value) for n in numbers]
 
     print(f'Mean value: {mean_value}')
