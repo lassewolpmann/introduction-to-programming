@@ -17,8 +17,8 @@ def task_1():
     '''
 
     # a)
-    y = input('Give a letter of the alphabet: ')
-    if y in ['a', 'e', 'i', 'o', 'u']:
+    y = input('Give a letter of the alphabet: ').lower()
+    if y in ['a', 'e', 'i', 'o', 'u', 'y', 'ä', 'ö']:
         x = True
 
     else:
