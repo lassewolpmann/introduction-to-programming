@@ -40,11 +40,8 @@ def task_1():
     a = float(input('Give any number for a: '))
     b = float(input('Give any number for b: '))
 
-    if a + b < 20 or a + b > 50:
+    if 20 > a + b > 50:
         x = True
-
-    else:
-        x = False
 
 
 def task_2():
@@ -97,7 +94,7 @@ def task_2():
     else:
         grade = None
 
-    if grade:
+    if grade:   # does grade have a value?
         print(f'With {points} points, your grade is: {grade}')
 
     else:
