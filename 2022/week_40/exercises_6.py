@@ -1,5 +1,4 @@
 def task_1():
-    # 1
     # The tuples are like lists, but immutable. However, the tuples have other advantages.
     list_ = [1, 2, 3, 'a', 'b', 'c', True, 2.5]
     tuple_ = (1, 2, 3, 'a', 'b', 'c', True, 2.5)
@@ -43,7 +42,6 @@ def task_1():
 
 
 def task_2():
-    # 2
     # Here you should use list methods. Please check the table in the lecture file named Lists.
 
     # a) The list li contains names.
@@ -67,13 +65,15 @@ def task_2():
     # ****
     # ****
     # Hint: Apply the multiplication operator * to string and lists. join() may be useful too.
-    small_number = int(input('Give a small number (1-10):'))
+    small_number = int(input('Give a small number (1-10): '))
     for i in range(small_number):
         print(f'{small_number * "*"}')
 
+    print('or')
+    print(small_number * f'{small_number * "*"}\n')
+
 
 def task_3():
-    # 3
     # This exercise uses functions of random module and ranges and lists.
     # list(range(1, 4)) returns [1, 2, 3]
 
@@ -90,6 +90,7 @@ def task_3():
     # c) We roll a die 12 times
     rolls: list = random.choices(range(1, 7), k=12)
     print(rolls)
+
     # How many 6’s are there?
     print(f"The list contains {rolls.count(6)} 6's")
     # Hint: Find the correct list method.
@@ -103,7 +104,6 @@ def task_3():
 
 
 def task_4():
-    # 4
     # We have a deck of playing cards.
     suits = ['♣', '♦', '♥', '♠']
     values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
