@@ -126,15 +126,19 @@ def task_4():
     print(f'{random_card[0]}{random_card[1]}')
 
     # d) Deal the cards for 4 players.
+    cards_per_player = len(deck) // 4
     for player in range(4):
-        r_card = random.choice(deck)
-        deck.pop(deck.index(r_card))
+        player_cards = []
+        for c in range(cards_per_player):
+            r_card = random.choice(deck)
+            deck.pop(deck.index(r_card))
+            player_cards.append(r_card)
 
-        print(f'Card for Player {player + 1} is {r_card}')
+        print(f'Cards for Player {player + 1} are {player_cards}')
 
 
 if __name__ == '__main__':
-    task_1()
-    task_2()
-    task_3()
+    # task_1()
+    # task_2()
+    # task_3()
     task_4()
