@@ -48,14 +48,14 @@ def task_2():
     roll_list = []
     while True:
         r_int = random.randrange(1, 7)
-        roll_list.append(r_int)
+        roll_list.append(str(r_int))
         if r_int == 6 or len(roll_list) >= 5:
             break
 
         else:
             continue
 
-    print(f'Rolling: {" ".join(map(str, roll_list))}')
+    print(f'Rolling: {" ".join(roll_list)}')
 
 
 def task_3():
