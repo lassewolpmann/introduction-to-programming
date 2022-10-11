@@ -104,7 +104,7 @@ def task_4():
     # The program prints the numbers from start to one (including both).
     # Each number is pausing at one second. In this exercise while loop is required.
     # Expected output. The text in parentheses may be printed or not:
-    # Give a starting integer:6
+    # Give a starting integer: 6
     # 6     (pause 1 second)
     # 5     (pause 1 second)
     # 4     (pause 1 second)
