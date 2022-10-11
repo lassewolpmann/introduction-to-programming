@@ -30,11 +30,6 @@ def task_1():
     # c) Manipulating with tuples
     # name, age, country
     item1 = ('Charlie Brown', 11, 'USA')
-    # name = item1[0]
-    # age = item1[1]
-    # country = item1[2]
-    # print(f'Name is {name}, age is {age}, country is {country}')
-    # Name is Charlie Brown, age is 11, country is USA
 
     # How to derive name, age and country with unpacking of tuples?
     (name, age, country) = item1
@@ -66,10 +61,6 @@ def task_2():
     # ****
     # Hint: Apply the multiplication operator * to string and lists. join() may be useful too.
     small_number = int(input('Give a small number (1-10): '))
-    for i in range(small_number):
-        print(f'{small_number * "*"}')
-
-    print('or')
     print(small_number * f'{small_number * "*"}\n')
 
 
@@ -84,19 +75,17 @@ def task_3():
     import random
     li = ['John', 'Liza', 'Peter', 'Mary']
     # should give a random word
-    # Hint: Check the random module function choice()
     print(random.choice(li))
 
     # c) We roll a die 12 times
-    rolls: list = random.choices(range(1, 7), k=12)
+    rolls = random.choices(range(1, 7), k=12)
     print(rolls)
 
     # How many 6’s are there?
     print(f"The list contains {rolls.count(6)} 6's")
-    # Hint: Find the correct list method.
 
     # d) The Finnish lottery takes 7 random integers between 1-40 (both included).
-    fin_lot: list = random.sample(range(1, 41), 7)
+    fin_lot = random.sample(range(1, 41), 7)
 
     # Sort the numbers from the smallest to the greatest.
     fin_lot.sort()
@@ -108,10 +97,10 @@ def task_4():
     suits = ['♣', '♦', '♥', '♠']
     values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
     deck = [(s, v) for s in suits for v in values]
-    print(deck)
+
     # a)
     # Calculate the number of the cards of the deck.
-    print(len(deck))
+    card_count = len(deck)
 
     # b) Change the suit of the second card ('♣', '3') to the card (‘♠’, '3').
     # What are your notions and why?
@@ -126,7 +115,7 @@ def task_4():
     print(f'{random_card[0]}{random_card[1]}')
 
     # d) Deal the cards for 4 players.
-    cards_per_player = len(deck) // 4
+    cards_per_player = card_count // 4
     for player in range(4):
         player_cards = []
         for c in range(cards_per_player):
@@ -138,7 +127,7 @@ def task_4():
 
 
 if __name__ == '__main__':
-    # task_1()
-    # task_2()
-    # task_3()
+    task_1()
+    task_2()
+    task_3()
     task_4()
