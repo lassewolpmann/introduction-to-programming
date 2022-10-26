@@ -82,7 +82,7 @@ def task_3():
         print(f'{eur_value} euro(s) = {eur_value * 0.878185} British Pound')
         print(f'{eur_value} euro(s) = {eur_value * 6.929159} Chinese Yuan Renminbi')
 
-        choice = input('Do you want to continue?: ')
+        choice = input('Do you want to continue (y/n)?: ')
         if choice == 'n':
             break
 
