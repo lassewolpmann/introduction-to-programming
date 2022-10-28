@@ -46,14 +46,11 @@ def task_2():
     import random
 
     roll_list = []
-    while True:
+    r_int = None
+
+    while len(roll_list) < 5 and r_int != 6:
         r_int = random.randrange(1, 7)
         roll_list.append(str(r_int))
-        if r_int == 6 or len(roll_list) >= 5:
-            break
-
-        else:
-            continue
 
     print(f'Rolling: {" ".join(roll_list)}')
 
@@ -116,6 +113,7 @@ def task_4():
     import time
 
     start_value = int(input('Give a starting integer: '))
+
     while start_value > 0:
         print(f'{start_value}\t\t(pause 1 second)')
         start_value -= 1
@@ -125,7 +123,7 @@ def task_4():
 
 
 if __name__ == '__main__':
-    task_1()
+    # task_1()
     task_2()
-    task_3()
-    task_4()
+    # task_3()
+    # task_4()
