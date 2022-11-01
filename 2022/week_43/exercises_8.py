@@ -1,16 +1,13 @@
 def task_1():
-    def single_die_roll():
-        import random
+    import random
 
+    def single_die_roll():
         return random.randint(1, 6)
 
     def n_die_rolls(n):
-        import random
         print(random.choices(range(1, 7), k=n))
 
     def return_n_die_rolls(n):
-        import random
-
         return random.choices(range(1, 7), k=n)
 
     # Roll a die and return the result.
@@ -55,9 +52,11 @@ def task_3():
     def get_sentence():
         """
         Give the subject, verb and object.
+
         If the desired sentence in normal language is "This is my home.", the subject would be "This", the verb would
         be "is", and the object would be "my home"
-        :return: Tuple containing the subject, verb and object.
+
+        :return: Tuple containing the subject, verb, and object.
         """
 
         sentence_list = (input('Subject: '), input('Verb: '), input('Object: '))
@@ -66,8 +65,8 @@ def task_3():
 
     def create_yoda_sentence(sentence):
         """
-        Given the sentence in form of a list, the function rearranges the values into a Yoda-type sentence.
-        :return: Yoda-type sentence as string.
+        Given the sentence in form of a tuple, the function rearranges the values into a Yoda-type sentence and
+        prints it out.
         """
 
         (s, v, o) = sentence
@@ -104,7 +103,7 @@ def task_4():
 
 
 if __name__ == '__main__':
-    # task_1()
-    # task_2()
+    task_1()
+    task_2()
     task_3()
-    # task_4()
+    task_4()
