@@ -1,13 +1,13 @@
 def task_1():
     import random
 
-    def single_die_roll():
+    def single_die_roll() -> int:
         return random.randint(1, 6)
 
-    def n_die_rolls(n):
+    def n_die_rolls(n: int):
         print(random.choices(range(1, 7), k=n))
 
-    def return_n_die_rolls(n):
+    def return_n_die_rolls(n: int) -> list:
         return random.choices(range(1, 7), k=n)
 
     # Roll a die and return the result.
@@ -21,12 +21,12 @@ def task_1():
 
 
 def task_2():
-    def string_to_tuple(s):
+    def string_to_tuple(s: str) -> tuple:
         s_tuple = (s[0], s[-1])
 
         return s_tuple
 
-    def dot_product_of_vectors(v1, v2):
+    def dot_product_of_vectors(v1: list, v2: list) -> int:
         dot_product = 0
         if len(v1) == len(v2):
             for n in range(len(v1)):
@@ -49,7 +49,7 @@ def task_2():
 
 
 def task_3():
-    def get_sentence():
+    def get_sentence() -> tuple:
         """
         Give the subject, verb and object.
 
@@ -63,14 +63,26 @@ def task_3():
 
         return sentence_list
 
-    def create_yoda_sentence(sentence):
+    def create_yoda_sentence(sentence: tuple):
         """
         Given the sentence in form of a tuple, the function rearranges the values into a Yoda-type sentence and
         prints it out.
         """
 
+        s: str
+        v: str
+        o: str
+
         (s, v, o) = sentence
-        yoda_sentence = f'{o.capitalize()}, {s.lower()} {v}.'
+
+        if s == 'I' or s == 'i':
+            s = s.capitalize()
+
+        else:
+            s = s.lower()
+
+        yoda_sentence = f'{o.capitalize()}, {s} {v}.'
+
         print(yoda_sentence)
 
     normal_sentence = get_sentence()
@@ -78,7 +90,7 @@ def task_3():
 
 
 def task_4():
-    def bound_ratio_calculation(bound, ratio):
+    def bound_ratio_calculation(bound: float, ratio: float):
         # float_list can be used without being passed as parameters, because it was defined in the global scope
         for index, f_value in enumerate(float_list):
             if f_value > bound:
