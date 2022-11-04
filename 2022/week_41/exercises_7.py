@@ -54,6 +54,8 @@ def task_2():
         if r_int == 6:
             break
 
+    print('\n')
+
 
 def task_3():
     # 3
