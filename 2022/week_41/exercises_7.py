@@ -114,9 +114,8 @@ def task_4():
 
     start_value = int(input('Give a starting integer: '))
 
-    while start_value > 0:
-        print(f'{start_value}\t\t(pause 1 second)')
-        start_value -= 1
+    for i in range(start_value, 0, -1):
+        print(f'{i}\t\t(pause 1 second)')
         time.sleep(1)
 
     print('Boom!')
