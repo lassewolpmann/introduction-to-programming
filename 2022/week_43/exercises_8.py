@@ -90,32 +90,24 @@ def task_3():
 
 
 def task_4():
-    def bound_ratio_calculation(bound: float, ratio: float):
-        # float_list can be used without being passed as parameters, because it was defined in the global scope
-        for index, f_value in enumerate(float_list):
-            if f_value > bound:
-                float_list[index] *= ratio
-
-            else:
-                pass
-
     import random
-    # Write a method that gets as an argument ︎a list of floats (all values between [0, 1)),
-    # ︎0 ≤ bound < 1 as a float, and
-    # 0 ≤ ratio < 1 as a float and then examines all values in the list one by one.
-    # If a value in the list exceeds the bound then the value in the list is replaced by the original value
-    # multiplied with the ratio.
-    # The method must modify the original list that was given, and it must not print or return anything.
 
-    float_list = []     # float_list is global
-    for i in range(random.randint(5, 20)):
-        float_list.append(random.uniform(0, 1))
+    def bound_ratio_calculation(b: float, r: float):
+        for i, f in enumerate(float_list):
+            # If a value in the list exceeds the bound
+            if f > b:
+                # the value in the list is replaced by the original value multiplied with the ratio
+                float_list[i] *= r
 
-    bound_ratio_calculation(random.uniform(0, 1), random.uniform(0, 1))
+    float_list = [random.uniform(0, 1) for _ in range(10)]  # a list of 10 floats (all values between [0, 1))
+    bound_value = random.uniform(0, 1)                      # 0 ≤ bound < 1 as a float
+    ratio_value = random.uniform(0, 1)                      # 0 ≤ ratio < 1 as a float
+
+    bound_ratio_calculation(bound_value, ratio_value)
 
 
 if __name__ == '__main__':
-    task_1()
-    task_2()
-    task_3()
+    # task_1()
+    # task_2()
+    # task_3()
     task_4()
