@@ -21,6 +21,7 @@ def task_1():
     # 92    33.3
     # 95    35.0
     # 98    36.7
+
     start_value = int(input('Give a start degree in F: '))
     end_value = int(input('Give an end degree in F: '))
     step_value = int(input('Give a step degree in F: '))
@@ -45,14 +46,13 @@ def task_2():
     # Hint: There are several ways to code the exercise. Think over the keywords told at the beginning of the exercises.
     import random
 
-    roll_list = []
-    r_int = None
-
-    while len(roll_list) < 5 and r_int != 6:
+    print('Rolling:', end=' ')
+    for r in range(5):
         r_int = random.randrange(1, 7)
-        roll_list.append(str(r_int))
+        print(r_int, end=' ')
 
-    print(f'Rolling: {" ".join(roll_list)}')
+        if r_int == 6:
+            break
 
 
 def task_3():
