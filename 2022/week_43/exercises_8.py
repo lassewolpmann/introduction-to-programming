@@ -43,8 +43,9 @@ def task_2():
 
     # The dot product of two vectors. A vector is like vec1 = [3, 2, 5] and vec2 = [1, 3, 2]
     # The dot product is defined like 3*1 + 2*3 + 5*2 = 19 and is returned.
-    vec1 = [3, 2, 5]
-    vec2 = [1, 3, 2]
+    amount_of_values = int(input('Amount of values per vector: '))
+    vec1 = [int(input(f'Vector 1, Value {_ + 1}: ')) for _ in range(amount_of_values)]
+    vec2 = [int(input(f'Vector 2, Value {_ + 1}: ')) for _ in range(amount_of_values)]
     dot_product_result = dot_product_of_vectors(vec1, vec2)
 
 
@@ -92,12 +93,12 @@ def task_3():
 def task_4():
     import random
 
-    def bound_ratio_calculation(b: float, r: float):
-        for i, f in enumerate(float_list):
+    def bound_ratio_calculation(bound: float, ratio: float):
+        for index, float_value in enumerate(float_list):
             # If a value in the list exceeds the bound
-            if f > b:
+            if float_value > bound:
                 # the value in the list is replaced by the original value multiplied with the ratio
-                float_list[i] *= r
+                float_list[index] *= ratio
 
     float_list = [random.uniform(0, 1) for _ in range(10)]  # a list of 10 floats (all values between [0, 1))
     bound_value = random.uniform(0, 1)                      # 0 ≤ bound < 1 as a float
