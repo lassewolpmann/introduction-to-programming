@@ -21,14 +21,27 @@ def task_1():
 
 
 def task_2():
-    whitespace = 0
-    while True:
-        out_line = 'o'.rjust(whitespace + 1)
-        print(out_line, end='')
-        whitespace += 1
+    print('Press ENTER to start')
 
+    whitespace = 0
+    direction = 'forward'
+
+    while True:
         if input() == '':
-            pass
+            out_line = 'o'.rjust(whitespace + 1)
+            print(out_line, end='')
+
+            if whitespace == 3 and direction == 'forward':
+                direction = 'backward'
+
+            elif whitespace == 0 and direction == 'backward':
+                direction = 'forward'
+
+            if whitespace < 3 and direction == 'forward':
+                whitespace += 1
+
+            elif whitespace > 0 and direction == 'backward':
+                whitespace -= 1
 
         else:
             print('Input other than ENTER detected. Exiting program!')
@@ -36,6 +49,8 @@ def task_2():
 
 
 def task_3():
+    print('Press ENTER to start')
+
     o_whitespace = 0
     x_whitespace = 0
 
@@ -56,7 +71,7 @@ def task_3():
 
             if o_whitespace + 1 - len(x_string) == 2:
                 print('\n')
-                print('x reached o!')
+                print('Game over! x reached o.')
                 break
 
         input()
