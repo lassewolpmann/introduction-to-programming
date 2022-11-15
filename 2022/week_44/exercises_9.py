@@ -84,6 +84,7 @@ def task_4():
     alphabet = []
     vowels = []
     consonants = []
+    word_list = []
 
     for letter in string.ascii_letters:
         if letter.lower() in ['a', 'e', 'i', 'o', 'u', 'y']:
@@ -94,32 +95,32 @@ def task_4():
 
         alphabet.append(letter)
 
-    # word is 5 or 7 characters long randomly
-    word_length = random.randint(5, 7)
+    for i in range(int(input('How many words do you want?: '))):
+        # word is 5 or 7 characters long randomly
+        word_length = random.choice([5, 7])
 
-    # each word starts with a random consonant and the second letter is always a random vowel
-    random_word = f'{random.choice(consonants)}{random.choice(vowels)}{"".join(random.choices(alphabet, k=2))}'
+        # each word starts with a random consonant and the second letter is always a random vowel
+        random_word = f'{random.choice(consonants)}{random.choice(vowels)}{"".join(random.choices(alphabet, k=2))}'
 
-    if word_length == 5:
-        # any word with the length of 5 will end in a random vowel
-        random_word = f'{random_word}{random.choice(vowels)}'
+        if word_length == 5:
+            # any word with the length of 5 will end in a random vowel
+            random_word = f'{random_word}{random.choice(vowels)}'
 
-    elif word_length == 7:
-        # two last letters of word with length of 7 will not both be vowels nor consonants
-        if random.randint(1, 2) == 1:
-            random_word = f'{random_word}{random.choice(vowels)}{random.choice(consonants)}'
+        elif word_length == 7:
+            # two last letters of word with length of 7 will not both be vowels nor consonants
+            if random.randint(1, 2) == 1:
+                random_word = f'{random_word}{random.choice(alphabet)}{random.choice(vowels)}{random.choice(consonants)}'
 
-        else:
-            random_word = f'{random_word}{random.choice(consonants)}{random.choice(vowels)}'
+            else:
+                random_word = f'{random_word}{random.choice(alphabet)}{random.choice(consonants)}{random.choice(vowels)}'
 
-    else:
-        random_word = f'{random_word}{"".join(random.choices(alphabet, k=2))}'
+        word_list.append(random_word)
 
-    print(random_word)
+    print(word_list)
 
 
 if __name__ == '__main__':
-    task_1()
-    task_2()
-    task_3()
+    # task_1()
+    # task_2()
+    # task_3()
     task_4()
