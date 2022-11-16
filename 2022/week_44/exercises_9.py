@@ -21,31 +21,26 @@ def task_1():
 
 
 def task_2():
-    print('Press ENTER to start')
+    try:
+        print('Press ENTER to start')
+        whitespace = 0
+        while True:
+            for i in range(6):
+                if input() == '':
+                    print('o'.rjust(whitespace + 1), end='')
 
-    whitespace = 0
-    direction = 'forward'
+                    if 0 <= i % 6 < 3:
+                        whitespace += 1
 
-    while True:
-        if input() == '':
-            out_line = 'o'.rjust(whitespace + 1)
-            print(out_line, end='')
+                    elif 3 <= i % 6 < 6:
+                        whitespace -= 1
 
-            if whitespace == 3 and direction == 'forward':
-                direction = 'backward'
+                else:
+                    print('Input other than ENTER detected. Exiting program!')
+                    raise StopIteration
 
-            elif whitespace == 0 and direction == 'backward':
-                direction = 'forward'
-
-            if whitespace < 3 and direction == 'forward':
-                whitespace += 1
-
-            elif whitespace > 0 and direction == 'backward':
-                whitespace -= 1
-
-        else:
-            print('Input other than ENTER detected. Exiting program!')
-            break
+    except StopIteration:
+        pass
 
 
 def task_3():
