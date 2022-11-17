@@ -23,17 +23,18 @@ def task_1():
 def task_2():
     try:
         print('Press ENTER to start')
-        whitespace = 0
+        whitespace_count = 0
         while True:
             for i in range(6):
                 if input() == '':
-                    print('o'.rjust(whitespace + 1), end='')
+                    out_line = f'{whitespace_count * " "}o'
+                    print(out_line, end='')
 
                     if 0 <= i % 6 < 3:
-                        whitespace += 1
+                        whitespace_count += 1
 
                     elif 3 <= i % 6 < 6:
-                        whitespace -= 1
+                        whitespace_count -= 1
 
                 else:
                     print('Input other than ENTER detected. Exiting program!')
@@ -46,29 +47,24 @@ def task_2():
 def task_3():
     print('Press ENTER to start')
 
-    o_whitespace = 0
-    x_whitespace = 0
+    whitespace_count = 0
 
     while True:
-        if o_whitespace < 12:
-            o_string = 'o'.rjust(o_whitespace + 1)
-            print(o_string, end='')
-            o_whitespace += 1
+        if whitespace_count < 12:
+            out_line = f'{whitespace_count * " "}o'
+            print(out_line, end='')
 
-        else:
-            x_string = 'x'.rjust(x_whitespace + 1)
-            print(x_string, end='')
-            x_whitespace += 2
+        elif whitespace_count >= 12:
+            x_string = f'{(whitespace_count - 12) * "  "}x'
+            o_string = f'{(whitespace_count - len(x_string)) * " "}o'
+            out_line = f'{x_string}{o_string}'
+            print(out_line, end='')
 
-            o_string = 'o'.rjust(o_whitespace + 1 - len(x_string))
-            print(o_string, end='')
-            o_whitespace += 1
-
-            if o_whitespace + 1 - len(x_string) == 2:
-                print('\n')
-                print('Game over! x reached o.')
+            if len(out_line) - len(x_string) == 1:
+                print('\nGAME OVER!')
                 break
 
+        whitespace_count += 1
         input()
 
 
