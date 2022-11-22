@@ -64,24 +64,24 @@ def task_3():
 
     b = {}
     for ind in range(0, 1000):
-        sensor_name = f'bbb-{ind + 1}'
-        b[sensor_name] = {}
-        b[sensor_name]['temperature'] = random.randint(0, 30)
-        b[sensor_name]['humidity'] = random.randint(0, 100)
+        sensor = f'bbb-{ind + 1}'
+        b[sensor] = {}
+        b[sensor]['temperature'] = random.randint(0, 30)
+        b[sensor]['humidity'] = random.randint(0, 100)
 
-    def print_a(sensor):
+    def print_a(sensor_name):
         # Since we're using a list, we can not access the desired values by its key value, but instead have to loop
         # through the entire list, to find a matching list item.
         for sensor_values in a['sensors']:
-            if sensor_values['sensor-name'] == sensor:
-                print(f'Values for sensor: {sensor}')
+            if sensor_values['sensor-name'] == sensor_name:
+                print(f'Values for sensor: {sensor_values["sensor-name"]}')
                 print(f'Temperature: {sensor_values["temperature"]}')
                 print(f'Humidity: {sensor_values["humidity"]}')
 
-    def print_b(sensor):
+    def print_b(sensor_name):
         # Here we're using a dictionary, meaning we can access the desired values directly by the key value.
-        sensor_values = b[sensor]
-        print(f'Values for sensor: {sensor}')
+        sensor_values = b[sensor_name]
+        print(f'Values for sensor: {sensor_name}')
         print(f'Temperature: {sensor_values["temperature"]}')
         print(f'Humidity: {sensor_values["humidity"]}')
 
