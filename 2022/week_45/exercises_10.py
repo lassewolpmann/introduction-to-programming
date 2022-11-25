@@ -1,4 +1,12 @@
 def task_1():
+    def raise_prices(price_dict):
+        for item in price_dict:
+            current_price = price_dict.get(item)
+            new_price = round(current_price * 1.1, 2)
+            price_dict.update({item: new_price})
+
+        return price_dict
+
     inventory = {
         "potato": 15,
         "apple": 10,
@@ -6,6 +14,7 @@ def task_1():
         "turnip": 7
 
     }
+
     price = {
         "potato": 1,
         "apple": 2,
@@ -21,10 +30,7 @@ def task_1():
     price.update({'pear': 1.5})
 
     # Raise all prices by 10%
-    for item in price:
-        current_price = price.get(item)
-        new_price = round(current_price * 1.1, 2)
-        price.update({item: new_price})
+    price = raise_prices(price)
 
     # Calculate total worth of inventory
     if inventory.keys() == price.keys():
