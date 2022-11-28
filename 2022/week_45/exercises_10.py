@@ -1,9 +1,9 @@
 def task_1():
     def raise_prices(price_dict):
-        for item in price_dict:
-            current_price = price_dict.get(item)
+        for item_entry in price_dict:
+            current_price = price_dict.get(item_entry)
             new_price = round(current_price * 1.1, 2)
-            price_dict.update({item: new_price})
+            price_dict.update({item_entry: new_price})
 
         return price_dict
 
