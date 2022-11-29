@@ -1,0 +1,6 @@
+kissa       cat
+koira       dog
+hevonen     horse
+leijona     lion
+elefantti   elephant
+sika        pig
