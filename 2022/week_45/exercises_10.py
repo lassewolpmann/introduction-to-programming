@@ -109,7 +109,7 @@ def task_4():
         count_dict.update({item: count})
 
     # Using count method
-    for item in letter_list:
+    for item in set(letter_list):
         count_dict.update({item: letter_list.count(item)})
 
     print(f'The string "cccc" appeared {count_dict["cccc"]} times.')
