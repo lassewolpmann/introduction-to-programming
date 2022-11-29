@@ -1,6 +1,6 @@
 def task_1():
     # Read the text file and print all unique words
-    with open('goodMorning.txt') as file:
+    with open('text_files/goodMorning.txt') as file:
         text = file.read()
 
         for word in text.split():
@@ -12,7 +12,7 @@ def task_2():
     # Read the text file line by line using readline().
     # Print only the lines that contain at least one number character.
     import string
-    with open('goodMorning.txt') as file:
+    with open('text_files/goodMorning.txt') as file:
         while True:
             line = file.readline()
 
@@ -29,7 +29,7 @@ def task_2():
 
 
 def task_3(filename):
-    with open(filename, 'w') as file:
+    with open(f'text_files/{filename}', 'w') as file:
         while True:
             word = input('Give word (write "end" to stop program): ')
 
@@ -41,7 +41,7 @@ def task_3(filename):
 
 
 def task_4():
-    with open('dictionary.txt') as file:
+    with open('text_files/dictionary.txt') as file:
         dictionary = file.readlines()
         word_dict = {line.split()[0]: line.split()[1] for line in dictionary}
 
