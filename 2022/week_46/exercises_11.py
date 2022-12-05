@@ -11,21 +11,12 @@ def task_1():
 def task_2():
     # Read the text file line by line using readline().
     # Print only the lines that contain at least one number character.
-    import string
+
     with open('text_files/goodMorning.txt') as file:
-        while True:
-            line = file.readline()
-
-            # Check if line is not empty
-            if line:
-                for n in string.digits:
-                    # If number is in line, print line out and break loop to go to next line
-                    if n in line.split():
-                        print(line)
-                        break
-
-            else:
-                break
+        data = file.read()
+        for line in data.split('\n'):
+            if any(char.isdigit() for char in line):
+                print(line)
 
 
 def task_3(filename):
